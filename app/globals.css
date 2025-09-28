@@ -1,0 +1,84 @@
+﻿@import "tailwindcss";
+
+:root {
+  --brand-50: #fff2e0;
+  --brand-100: #ffe4c2;
+  --brand-200: #ffd4a1;
+  --brand-300: #ffc480;
+  --brand-400: #ffb661;
+  --brand-500: #ffa94d;
+  --brand-600: #ff912f;
+  --brand-700: #ff7f1a;
+  --brand-800: #ff6f0b;
+  --brand-900: #e05f00;
+  --brand-default: #ffa94d;
+  --brand-dark: #ff6b00;
+  --surface: #fff9f3;
+  --body-text: #1f160c;
+}
+
+@theme inline {
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand: var(--brand-default);
+  --color-brand-dark: var(--brand-dark);
+  --color-surface: var(--surface);
+  --color-body: var(--body-text);
+  --font-sans: var(--font-heebo), "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --leading-snug-rtl: 1.45;
+  --leading-relaxed-rtl: 1.9;
+  --tracking-tight-rtl: -0.018em;
+  --tracking-wide-rtl: 0.06em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--surface);
+  color: var(--body-text);
+  font-family: var(--font-heebo), "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  direction: rtl;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+@layer utilities {
+  .leading-snug-rtl {
+    line-height: var(--leading-snug-rtl);
+  }
+  .leading-relaxed-rtl {
+    line-height: var(--leading-relaxed-rtl);
+  }
+  .tracking-tight-rtl {
+    letter-spacing: var(--tracking-tight-rtl);
+  }
+  .tracking-wide-rtl {
+    letter-spacing: var(--tracking-wide-rtl);
+  }
+  .text-balance-rtl {
+    text-wrap: balance;
+  }
+}
