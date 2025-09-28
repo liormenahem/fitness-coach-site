@@ -1,28 +1,31 @@
 ﻿import type { Metadata } from "next";
-import { Heebo } from "next/font/google";
 import "./globals.css";
+import { Heebo } from "next/font/google";
 
 const heebo = Heebo({
+  subsets: ["hebrew", "latin"],
   variable: "--font-heebo",
-  subsets: ["latin", "hebrew"],
   display: "swap",
-  weight: ["300", "400", "500", "700", "800"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "YuviFit | מאמן הכושר הדיגיטלי שלך",
-  description:
-    "פלטפורמת אימוני כושר מותאמת אישית ב-RTL, עם כלי תיעוד, תזכורות וקהילה תומכת.",
+  title: "מדריכת כושר - אתר שיווקי",
+  description: "אתר מהיר ונגיש למדריכת כושר + בסיס למערכת אדמין",
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  metadataBase: new URL("https://example.com"),
+  openGraph: {
+    title: "מדריכת כושר",
+    description: "אתר שיווקי מהיר + אדמין לעריכה ויצירת לידים",
+    type: "website",
+    url: "https://example.com",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="he" dir="rtl">
-      <body className={`${heebo.variable} font-sans antialiased bg-surface text-body`}>{children}</body>
+      <body className={`${heebo.variable} font-sans`}>{children}</body>
     </html>
   );
 }
