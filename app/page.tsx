@@ -3,7 +3,7 @@
     <main className="min-h-dvh">
       <section className="mx-auto max-w-4xl px-4 py-24 text-center">
         <h1 className="text-4xl font-bold leading-tight md:text-6xl">
-          מאיצים את הדרך לגוף חזק ובריא
+          מאיצים את הדרך לגוף חזק ובריא מאוד
         </h1>
         <p className="mt-4 text-lg text-gray-600">
           אימונים מותאמים אישית, ליווי צמוד, ותוצאות מדידות – בקרוב טפסי לידים וממשק אדמין.
